@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+/*        global setting*/
+    
+        *{
+            font-family: Montserrat;
+            box-sizing: border-box;
+        }
+        body,h1,h2,h3,h4,h5,h6,p,ul,ol,li{
+            margin: 0;
+            padding: 0;
+        }
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        img{
+            width:100%;
+        }
+/*        **************************/
+/*        layout*/
+        .full-width{
+            width: 100%;
+        }
+        .fixed-width{
+            width: 1200px;
+            margin: auto;
+        }
+        .col-1{
+            width: 100%;
+            padding: 15px;
+        }
+        .col-2{
+            width: 50%;
+        }
+        .col-3{
+            width: calc( 100% / 3 );
+        }
+        .col-4{
+            width: 25%;
+        }
+        .col-5{
+            width: 20%;
+        }
+        .col-2,.col-3,.col-4,.col-5{
+            float: left;
+            padding: 15px;
+        }
+        p{
+            color: #b9b9b9;
+            line-height: 
+        }
+/*        **********************************/
+/*        Nav*/
+        nav{
+/*            background-color: #bfbfbf;*/
+            position: fixed;
+        }
+        nav .col-1{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        nav .logo{
+            float: left;
+            color: aliceblue;
+            font-size:1em;
+        }
+        nav .menu{
+            float: right;
+        }
+        nav .menu li{
+            float: left;
+            list-style: none;
+        }
+        nav .menu a{
+            text-decoration: none;
+            display: block;
+            color: #ffffff;
+            margin-left: 30px;
+            font-size: 10px;
+            transition: all .4s;
+        }
+        nav .menu a:hover{
+            color: #53caff;
+        }
+/*        **********************/
+/*        header */
+        header{
+            background-image:url(image/photo-banner.jpeg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+/*            padding-top: 300px;*/
+/*            padding-bottom: 300px;*/
+            height: 800px;
+            text-align: center;
+            color: #ffffff;
+            display: table;
+        }
+        header .fixed-width{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        header h1{
+            font-size: 4em;
+        }
+        header p{
+            color: #fff;
+            font-size: 1em;
+        }
+/*         *******************************/
+/*        slogan*/
+        #slogan{
+            padding-top: 150px;
+            padding-bottom: 150px;
+            
+        }
+        #slogan .fixed-width{
+            width: 760px;
+            text-align: center;
+        }
+        #slogan h2{
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+/*        **************************************/
+/*        works*/
+        #works{
+            background-image: url(image/photo-banner.jpeg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+/*        ******************************************/
+/*        services*/
+        #services{
+            padding-top: 150px;
+            padding-bottom: 150px;
+/*            background-color: aqua;*/
+        }
+        #services .fixed-width:nth-of-type(1){
+            text-align: center;
+            margin-bottom:50px;
+        }
+        #services h2{
+            margin-bottom: 30px;
+        }
+        #services h3{
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        #services .col-3{
+            height: 300px;
+        }
+/*        *********************************************/
+/*        banner*/
+        #banner{
+            padding-top:150px;
+            padding-bottom: 150px;
+            text-align: center;
+            background-color: #b2b2b2;
+/*            color: aliceblue;*/
+        }
+        #banner p{
+            color: aliceblue;
+        }
+/*        *************************************************/
+/*        about*/
+        #about{
+            padding-top: 150px;
+            padding-bottom: 150px;
+            text-align: center;
+        }
+        #about .fixed-width:nth-of-type(1){
+            margin-bottom: 50px;
+        }
+        #about .pic{
+            height:370px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border-radius: 40px;
+            border: 15px solid #969696;
+        }
+/*        *************************************************/
+/*        purchase*/
+        #purchase{
+            padding-top: 150px;
+            padding-bottom: 150px;
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+        }
+        #purchase h2{
+            padding-bottom: 30px;
+        }
+
+        #purchase a{
+            color: aliceblue;
+            text-decoration: none;
+            transition: all .5s
+        }
+        .btn{
+            display: inline-block;
+            padding: 10px 30px;
+            border: 1px solid #fff;
+            transition: all .5s
+        }
+        #purchase a:hover{
+            color: black;
+            font-size: 18px;
+        }
+        .btn:hover{
+            border:1px solid #000;
+        }
+/*        *****************************************/
+/*        blog*/
+        #blog{
+            padding-top: 150px;
+            padding-bottom: 150px;
+            
+        }
+         #blog .fixed-width:nth-of-type(1){
+            text-align: center;
+            margin-bottom: 150px;
+        }
+        #blog h2{
+            margin-bottom: 30px;
+        }
+        #blog .gallery{
+            height: 270px;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        #blog .gallery img{
+            position: absolute;
+        }
+        #blog .gallery .date{
+            position: absolute;
+            background-color: #000;
+/*            padding: 5px;*/
+            top: 0px;
+            left: 0px;
+            color: #fff;
+            text-align: center;
+            padding: 5px 10px;
+        }
+        #blog .col-4 p{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        #blog .col-4 a{
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            
+        }
+       
+        
+    </style>
+</head>
+<body>
+   <nav class="full-width">
+       <div class="col-1 clearfix">
+           <div class="logo">AFELA</div>
+           <div class="menu">
+               <ul>
+                   <li><a href="#">HOME</a></li>
+                   <li><a href="#">WORKS</a></li>
+                   <li><a href="#">SERVICES</a></li>
+                   <li><a href="#">ABOUT US</a></li>
+                   <li><a href="#">BLOG</a></li>
+                   <li><a href="#">CONTACT</a></li>
+                   <li><a href="#">ALL DEMOS</a></li>
+                   
+               </ul>
+           </div>
+       </div>
+   </nav>
+    <header class="full-width">
+       <div class="fixed-width">
+           <h1>AMAZING STUDIO</h1>
+        <p>Flexible and Creative. Meet the New Style</p>
+       </div>
+    </header>
+    <div id="slogan" class="full-width">
+        <div class="fixed-width">
+           <h2>We Provide Awesome Digital Solutions
+With a Great Attention to Details</h2>
+           <p>Unika is a responsive and elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur. Grab this perfect solution. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip awesome. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip awesome.</p>
+        </div>
+    </div>
+    <div id="works" class="full-width">works</div>
+    <div id="services">
+      <div class="fixed-width">
+           <h2>Best Services</h2>
+           <p>We help our clients market to the world and inspire minds of people</p>
+      </div>
+           <div class="fixed-width clearfix">
+                <div class="col-3">
+                   <i class="fa fa-user-circle fa-4x" aria-hidden="true"></i>
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, rerum!</p>
+                </div>
+                 <div class="col-3">
+                   <i class="fa fa-address-book-o fa-4x" aria-hidden="true"></i>
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, rerum!</p>
+                </div>
+                <div class="col-3">
+                   <i class="fa fa-comment fa-4x" aria-hidden="true"></i>
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, rerum!</p>
+                </div>
+                <div class="col-3">
+                   <i class="fa fa-eye-slash fa-4x" aria-hidden="true"></i>
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, rerum!</p>
+                </div>
+                <div class="col-3">
+                   <i class="fa fa-hand-lizard-o fa-4x" aria-hidden="true"></i>
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, rerum!</p>
+                </div>  
+                <div class="col-3">
+                   <i class="fa fa-info-circle fa-4x" aria-hidden="true"></i>
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, rerum!</p>
+                </div>  
+         </div>
+        </div>
+         <div id="banner" class="full-width">
+            
+                 <h2>title</h2>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, ipsum, quos veniam quia velit odio sapiente ut ab, magnam libero qui illo. Expedita facere officia nostrum suscipit totam ea voluptatem.</p>
+             
+         </div>
+         <div id="about" class="full-width">
+            <div class="fixed-width">
+                 <div class="col-1">
+                     <h2>about us</h2>
+                     <p>We help our clients market to the world and inspire minds of people</p>
+                 </div>
+            </div>
+             <div class="fixed-width clearfix">
+                 <div class="col-3">
+                    <div class="pic">
+                        <img src="image/photo-about1.jpeg" alt="">
+                    </div>
+                     <h3>David Geller</h3>
+                     <p>Lorem ipsum dolor.</p>
+                 </div>
+                  <div class="col-3">
+                    <div class="pic">
+                        <img src="image/az-studio_files/002.jpg" alt="">
+                    </div>
+                     <h3>David Geller</h3>
+                     <p>Lorem ipsum dolor.</p>
+                 </div>
+                  <div class="col-3">
+                    <div class="pic">
+                        <img src="image/az-studio_files/003.jpg" alt="">
+                    </div>
+                     <h3>David Geller</h3>
+                     <p>Lorem ipsum dolor.</p>
+                 </div>
+             </div>
+         </div>
+         <div id="purchase" class="full-width">
+             <h2>ARE U READY TO SLEEP?</h2>
+             <a href="#" class="btn">sleep now!</a>
+         </div>
+         <div id="blog" class="full-width">
+             <div class="fixed-width">
+                 <h2>LATEST NEWS</h2>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, eos!</p>
+                 
+             </div>
+             <div class="fixed-width">
+                 <div class="col-4">
+                     <div class="gallery">
+                         <img src="image/photo-blog1.jpeg" alt="">
+                         <div class="date">
+                             <div class="day">13</div>
+                             <div class="month">Mars</div>
+                         </div>
+                     </div>
+                     <h3>title</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, omnis?</p>
+                     <a href="#">Read more...</a>
+                 </div>
+                 <div class="col-4">
+                     <div class="gallery">
+                         <img src="image/photo-blog1.jpeg" alt="">
+                         <div class="date">
+                             <div class="day">13</div>
+                             <div class="month">Mars</div>
+                         </div>
+                     </div>
+                     <h3>title</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, omnis?</p>
+                     <a href="#">Read more...</a>
+                 </div>
+                 <div class="col-4">
+                     <div class="gallery">
+                         <img src="image/photo-blog1.jpeg" alt="">
+                         <div class="date">
+                             <div class="day">13</div>
+                             <div class="month">Mars</div>
+                         </div>
+                     </div>
+                     <h3>title</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, omnis?</p>
+                     <a href="#">Read more...</a>
+                 </div>
+                 <div class="col-4">
+                     <div class="gallery">
+                         <img src="image/photo-blog1.jpeg" alt="">
+                         <div class="date">
+                             <div class="day">13</div>
+                             <div class="month">Mars</div>
+                         </div>
+                     </div>
+                     <h3>title</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, omnis?</p>
+                     <a href="#">Read more...</a>
+                 </div>
+             </div>
+         </div>
+         
+    
+</body>
+</html>
